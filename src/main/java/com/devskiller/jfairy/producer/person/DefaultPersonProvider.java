@@ -194,7 +194,7 @@ public class DefaultPersonProvider implements PersonProvider {
 			return;
 		}
 		LocalDate maxDate = timeProvider.getCurrentDate().minusYears(age);
-		LocalDate minDate = maxDate.minusYears(1).plusDays(1);
+		LocalDate minDate = maxDate.plusYears(1);
 		dateOfBirth = dateProducer.randomDateBetweenTwoDates(minDate, maxDate);
 	}
 
